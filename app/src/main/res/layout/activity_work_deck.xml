@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkDeck">
+
+    <ImageView
+        android:id="@+id/shiftEndImage"
+        android:layout_width="23dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/shiftend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/shiftend"
+        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+    <EditText
+        android:id="@+id/companyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_your_work_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/shiftStartImage"
+        android:layout_width="23dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/shiftstart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/shiftstart"
+        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+    <EditText
+        android:id="@+id/shiftstart"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="30dp"
+        android:hint="@string/hh_mm"
+        android:inputType="time"
+        android:text="@string/shift_start"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/hourlyrate"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/shiftend"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="44dp"
+        android:elegantTextHeight="true"
+        android:hint="@string/hh_mm"
+        android:inputType="time"
+        android:text="@string/shift_end"
+        android:textAlignment="textEnd"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/shiftstart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/shiftstart"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/hourlyrate"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="350dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/hourlyrate"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/tipsImage"
+        android:layout_width="23dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="11dp"
+        android:contentDescription="@string/tips_recieved"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tips"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:ignore="ImageContrastCheck" />
+
+    <EditText
+        android:id="@+id/tips"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="44dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/tips"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hourlyrate"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:onClick="onclickSave"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hourlyrate" />
+
+    <TextView
+        android:id="@+id/quote"
+        android:layout_width="356dp"
+        android:layout_height="150dp"
+        android:text="@string/textview"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889" />
+
+</android.support.constraint.ConstraintLayout>
